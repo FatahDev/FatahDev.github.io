@@ -1,0 +1,41 @@
+* {
+	box-sizing: border-box;
+}
+
+.font-header {
+	font-size : 17px;
+}
+
+.font-body {
+	font-size : 16px;
+}
+
+.header { grid-area: header;}
+.sidenav { grid-area: sidenav;}
+.maincont { grid-area: maincont;}
+.asidecont { grid-area: asidecont;}
+.footer { grid-area: footer}
+
+.grid-container-without-aside {
+	display: grid;
+	grid-template-areas:
+		'header header header'
+		'sidenav maincont maincont'
+		'footer footer footer';
+	gap: 10px;
+	padding: 10px;
+}
+
+.grid-container-with-aside {
+	display: grid;
+	grid-template-areas:
+		'header header header'
+		'sidenav maincont aside'
+		'footer footer footer';
+	gap: 10px;
+	padding: 10px;
+}
+
+.grid-container  > div {
+	border: 1px solid black;
+}
